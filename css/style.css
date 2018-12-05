@@ -1,0 +1,15 @@
+.schedule__body {
+  padding: 15px 0; }
+.schedule__card {
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden; }
+  .schedule__card-title {
+    margin: 0;
+    padding: 10px 15px;
+    background: #cce5ff; }
+  .schedule__card-body {
+    padding: 15px; }
+
+/*# sourceMappingURL=style.css.map */
