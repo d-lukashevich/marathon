@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=992, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <title>Предновогодний марафон "Обновление"</title>
@@ -28,7 +28,7 @@
 
                             <div class="schedule__card">
                                 <div class="schedule__card-body">
-                                    <table class="schedule__table">
+                                    <table class="schedule__table schedule__table_xl">
                                         <thead>
                                         <tr>
                                             <td class="schedule__card-title"></td>
@@ -73,6 +73,7 @@
                                                         <td class="schedule__card-title"></td>
                                                         <td class="schedule__card-title">{{days['monday'].name}}</td>
                                                         <td class="schedule__card-title">{{days['tuesday'].name}}</td>
+                                                        <td class="schedule__card-title">{{days['wednesday'].name}}</td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -80,6 +81,55 @@
                                                         <td><strong>{{eating.name}}</strong></td>
                                                         <td>{{days['monday'].eatings[key]}}</td>
                                                         <td>{{days['tuesday'].eatings[key]}}</td>
+                                                        <td>{{days['wednesday'].eatings[key]}}</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <a href="#" class="btn btn-primary schedule__btn">Скачать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="schedule__card">
+                                            <div class="schedule__card-body">
+                                                <table class="schedule__table">
+                                                    <thead>
+                                                    <tr>
+                                                        <td class="schedule__card-title"></td>
+                                                        <td class="schedule__card-title">{{days['thursday'].name}}</td>
+                                                        <td class="schedule__card-title">{{days['friday'].name}}</td>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr v-for="(eating, key, index) in eatingsMap">
+                                                        <td><strong>{{eating.name}}</strong></td>
+                                                        <td>{{days['thursday'].eatings[key]}}</td>
+                                                        <td>{{days['friday'].eatings[key]}}</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <a href="#" class="btn btn-primary schedule__btn">Скачать</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="schedule__card">
+                                            <div class="schedule__card-body">
+                                                <table class="schedule__table">
+                                                    <thead>
+                                                    <tr>
+                                                        <td class="schedule__card-title"></td>
+                                                        <td class="schedule__card-title">{{days['saturday'].name}}</td>
+                                                        <td class="schedule__card-title">{{days['sunday'].name}}</td>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr v-for="(eating, key, index) in eatingsMap">
+                                                        <td><strong>{{eating.name}}</strong></td>
+                                                        <td>{{days['saturday'].eatings[key]}}</td>
+                                                        <td>{{days['sunday'].eatings[key]}}</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -108,7 +158,7 @@
                             <div class="container">
                                 <div class="row">
 
-                                    <div class="col-12 col-md-4" v-for="day in days">
+                                    <div class="col-12 col-lg-6 col-xl-4" v-for="day in days">
                                         <div class="schedule__card">
                                             <div class="schedule__card-body">
                                                 <table class="schedule__table">
@@ -120,8 +170,8 @@
                                                         <tbody>
                                                         <tr v-for="(eating, key, index) in day.eatings">
                                                             <td>
-                                                                <div>{{eatingsMap[key].name}}</div>
-                                                                <div>{{eatingsMap[key].notice}}</div>
+                                                                <div><strong>{{eatingsMap[key].name}}</strong></div>
+                                                                <div><strong>{{eatingsMap[key].notice}}</strong></div>
                                                             </td>
                                                             <td>{{eating}}</td>
                                                         </tr>
