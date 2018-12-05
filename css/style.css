@@ -1,5 +1,5 @@
 .schedule__body {
-  padding: 15px 0; }
+  padding: 0; }
 .schedule__card {
   margin-bottom: 15px;
   border: 1px solid #eee;
@@ -8,8 +8,20 @@
   .schedule__card-title {
     margin: 0;
     padding: 10px 15px;
-    background: #cce5ff; }
-  .schedule__card-body {
-    padding: 15px; }
+    background: #cce5ff;
+    white-space: nowrap;
+    font-size: 1.25em; }
+.schedule__table {
+  width: 100%;
+  text-align: center; }
+  .schedule__table thead {
+    font-weight: bold; }
+  .schedule__table tbody tr:nth-of-type(even) {
+    background: #eee; }
+  .schedule__table tbody td {
+    min-width: 115px;
+    padding: 15px 15px; }
+.schedule__btn {
+  margin: 15px; }
 
 /*# sourceMappingURL=style.css.map */
